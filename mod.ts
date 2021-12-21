@@ -384,7 +384,7 @@ if (import.meta.main) {
       const answer = await prompt(
         `The directory ${root} does not exist. Do you wish to create it? [y/n]`
       )
-      if (answer === 'y' || 'Y') {
+      if (answer.toUpperCase() === 'Y' ) {
         await makeBoilerplate(cwd, root)
       } else {
         info('Exiting.')
